@@ -3,14 +3,18 @@ import './Calendar.scss';
 
 const daysOfWeekArr = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
-const Calendar = ({ calendar }) => {
+const Calendar = ({ calendar, selectDate, switchMonth }) => {
     const days = calendar.currentMonth.map((week, index) => {
         return (
             <div className='week' key={index}>
                 {week.map((day, index) => {
                     return day ? (
-                        <div className='day' key={index}>
-                            {day}
+                        <div
+                            className='day'
+                            key={index}
+                            onClick={() => onSelectDate(day)}
+                        >
+                            {day.getDate()}
                         </div>
                     ) : (
                         <div key={index}></div>
@@ -28,13 +32,39 @@ const Calendar = ({ calendar }) => {
         );
     });
 
+    const showNextMonth = () => {
+        const date = new Date(
+            calendar.currentDate.getFullYear(),
+            calendar.currentDate.getMonth() + 1
+        );
+
+        switchMonth(date);
+    };
+
+    const showPrevMonth = () => {
+        const date = new Date(
+            calendar.currentDate.getFullYear(),
+            calendar.currentDate.getMonth() - 1
+        );
+
+        switchMonth(date);
+    };
+
+    const onSelectDate = (date) => {
+        selectDate(date);
+    };
+
     return (
         <div className='calendar'>
             <div className='calendar-container'>
                 <div className='date-switcher'>
-                    <div className='arrow-prev'>Back</div>
+                    <div className='arrow-prev' onClick={showPrevMonth}>
+                        Back
+                    </div>
                     <span>September 2020</span>
-                    <div className='arrow-next'>Forward</div>
+                    <div className='arrow-next' onClick={showNextMonth}>
+                        Forward
+                    </div>
                 </div>
                 <div className='calendar-dates'>{days}</div>
                 <div className='calendar-days'>{daysOfWeek}</div>

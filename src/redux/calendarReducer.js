@@ -2,30 +2,27 @@ import * as ActionTypes from './actionTypes';
 
 const initialState = {
     currentMonth: [
-        [undefined, undefined, undefined, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, undefined, undefined],
+        [undefined, undefined, undefined, new Date(), new Date(), new Date(), new Date()],
+        [new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date()],
+        [new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date()],
+        [new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date()],
+        [new Date(), new Date(), new Date(), new Date(), new Date(), undefined, undefined],
     ],
-    currentDate: 1
+    currentDate: new Date(),
+    selectedDate: null
 }
 
 
 export const calendarReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ActionTypes.showNextMonth:
-            return { ...state };
-        case ActionTypes.showPrevMonth:
-            return { ...state };
+        case ActionTypes.switchMonth:
+            let switchedDate = action.switchedDate;
+            return { ...state, currentDate: switchedDate };
         case ActionTypes.selectDate:
-            return { ...state };
+            let date = action.date;
+            return { ...state, selectedDate: date };
         default:
             return state;
 
     }
 }
-
-export const showNextMonthActionCreator = () => ({ type: ActionTypes.showNextMonth });
-export const showPrevMonthActionCreator = () => ({ type: ActionTypes.showPrevMonth });
-export const selectDateActionCreator = () => ({ type: ActionTypes.selectDate });
