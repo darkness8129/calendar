@@ -1,0 +1,40 @@
+@import './../../../scss/colors';
+.nav-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.nav-link_active {
+    color: $primary-color;
+}
+
+@media (max-width: 575px) {
+    .header_active {
+        height: 100vh;
+        align-items: flex-start;
+    }
+    .navbar {
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+
+    .nav {
+        padding: 0;
+    }
+
+    .nav-link {
+        margin: 0;
+    }
+
+    .nav-item {
+        border-bottom: 2px solid grey;
+        margin: 0;
+        margin-top: 20px;
+    }
+}

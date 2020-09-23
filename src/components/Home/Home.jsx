@@ -7,10 +7,10 @@ const Home = () => {
         <div className='home'>
             <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-8 p-0'>
+                    <div className='col-lg-8 p-0'>
                         <ImgBlock />
                     </div>
-                    <div className='col-4 p-0'>
+                    <div className='col-lg-4 p-0'>
                         <Calendar />
                     </div>
                 </div>
