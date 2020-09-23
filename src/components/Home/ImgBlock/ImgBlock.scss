@@ -1,0 +1,26 @@
+@import './../../../scss/colors';
+.img-block {
+    background-image: url(/images/homeImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 100px);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 50px;
+}
+.img-text {
+    text-align: end;
+    width: 100%;
+    max-width: 400px;
+    p {
+        color: white;
+    }
+}
+
+.img-title {
+    font-weight: bold;
+    color: $primary-color;
+}

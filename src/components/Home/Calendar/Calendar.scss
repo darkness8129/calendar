@@ -1,0 +1,51 @@
+@import './../../../scss/colors';
+
+.calendar {
+    height: 100%;
+    background-color: #272829;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 350px;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 20px 0;
+}
+
+.date-cell {
+    padding: 15px 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-top: 2px solid grey;
+
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+.date-switcher {
+    padding-bottom: 15px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
