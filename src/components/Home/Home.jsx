@@ -1,5 +1,5 @@
 import React from 'react';
-import Calendar from './Calendar/Calendar';
+import CalendarContainer from './Calendar/CalendarContainer';
 import ImgBlock from './ImgBlock/ImgBlock';
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
                         <ImgBlock />
                     </div>
                     <div className='col-lg-4 p-0'>
-                        <Calendar />
+                        <CalendarContainer />
                     </div>
                 </div>
             </div>

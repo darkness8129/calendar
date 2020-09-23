@@ -7,17 +7,19 @@ const navLinksItems = [
     {
         path: '/',
         title: 'Home',
+        id: 1,
     },
     {
         path: '/about',
         title: 'About',
+        id: 2,
     },
 ];
 
 const Nav = ({ isOpen, toggleIsOpen }) => {
     const navLinks = navLinksItems.map((navLink) => {
         return (
-            <li className='nav-item'>
+            <li className='nav-item' key={navLink.id}>
                 <NavLink
                     exact
                     to={navLink.path}

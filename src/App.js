@@ -5,7 +5,6 @@ import Header from './components/Header/Header';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './scss/Base.scss';
 
-
 function App() {
     return (
         <BrowserRouter>

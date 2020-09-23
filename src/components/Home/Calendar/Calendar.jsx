@@ -1,62 +1,43 @@
 import React from 'react';
 import './Calendar.scss';
 
-const Calendar = () => {
+const daysOfWeekArr = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
+const Calendar = ({ calendar }) => {
+    const days = calendar.currentMonth.map((week, index) => {
+        return (
+            <div className='week' key={index}>
+                {week.map((day, index) => {
+                    return day ? (
+                        <div className='day' key={index}>
+                            {day}
+                        </div>
+                    ) : (
+                        <div key={index}></div>
+                    );
+                })}
+            </div>
+        );
+    });
+
+    const daysOfWeek = daysOfWeekArr.map((day, index) => {
+        return (
+            <div className='day-of-week' key={index}>
+                {day}
+            </div>
+        );
+    });
+
     return (
         <div className='calendar'>
             <div className='calendar-container'>
                 <div className='date-switcher'>
-                    <div class='arrow-prev'>Back</div>
+                    <div className='arrow-prev'>Back</div>
                     <span>September 2020</span>
-                    <div class='arrow-next'>Forward</div>
+                    <div className='arrow-next'>Forward</div>
                 </div>
-                <div className='calendar-dates'>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>21</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>11</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                    <div className='date-cell'>01</div>
-                </div>
-
-                <div className='calendar-days'>
-                    <div className='day-of-week'>S</div>
-                    <div className='day-of-week'>M</div>
-                    <div className='day-of-week'>T</div>
-                    <div className='day-of-week'>W</div>
-                    <div className='day-of-week'>T</div>
-                    <div className='day-of-week'>F</div>
-                    <div className='day-of-week'>S</div>
-                </div>
+                <div className='calendar-dates'>{days}</div>
+                <div className='calendar-days'>{daysOfWeek}</div>
             </div>
         </div>
     );

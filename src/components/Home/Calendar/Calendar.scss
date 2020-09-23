@@ -19,13 +19,14 @@
 }
 
 .calendar-dates {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
     padding: 20px 0;
 }
 
-.date-cell {
+.week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.day {
     padding: 15px 5px;
     cursor: pointer;
 
