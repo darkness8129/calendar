@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import { BrowserRouter, Route } from 'react-router-dom';
+import './scss/Base.scss';
 
 function App() {
     return (
