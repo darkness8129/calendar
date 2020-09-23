@@ -1,28 +1,27 @@
 import * as ActionTypes from './actionTypes';
+import { getDaysOfMonth } from './../components/Home/Calendar/calendarFunctions';
+
+const currentDate = new Date();
+const currentMonthDays = getDaysOfMonth(currentDate.getFullYear(), currentDate.getMonth());
 
 const initialState = {
-    currentMonth: [
-        [undefined, undefined, undefined, new Date(), new Date(), new Date(), new Date()],
-        [new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date()],
-        [new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date()],
-        [new Date(), new Date(), new Date(), new Date(), new Date(), new Date(), new Date()],
-        [new Date(), new Date(), new Date(), new Date(), new Date(), undefined, undefined],
-    ],
+    currentMonth: currentMonthDays,
     currentDate: new Date(),
     selectedDate: null
 }
 
-
 export const calendarReducer = (state = initialState, action) => {
     switch (action.type) {
         case ActionTypes.switchMonth:
-            let switchedDate = action.switchedDate;
-            return { ...state, currentDate: switchedDate };
+            return { ...state, currentDate: action.switchedDate };
         case ActionTypes.selectDate:
-            let date = action.date;
-            return { ...state, selectedDate: date };
+            return { ...state, selectedDate: action.date };
+        case ActionTypes.setDaysOfMonth:
+            return { ...state, currentMonth: action.daysOfMonth };
         default:
             return state;
 
     }
 }
+
+

@@ -1,9 +1,11 @@
 import React from 'react';
 import './Calendar.scss';
+import { getDaysOfMonth } from './calendarFunctions';
 
 const daysOfWeekArr = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
-const Calendar = ({ calendar, selectDate, switchMonth }) => {
+const Calendar = ({ calendar, selectDate, switchMonth, setDaysOfMonth }) => {
+    debugger;
     const days = calendar.currentMonth.map((week, index) => {
         return (
             <div className='week' key={index}>
@@ -33,21 +35,21 @@ const Calendar = ({ calendar, selectDate, switchMonth }) => {
     });
 
     const showNextMonth = () => {
-        const date = new Date(
-            calendar.currentDate.getFullYear(),
-            calendar.currentDate.getMonth() + 1
-        );
+        const year = calendar.currentDate.getFullYear();
+        const month = calendar.currentDate.getMonth();
+        const date = new Date(year, month + 1);
 
         switchMonth(date);
+        setDaysOfMonth(getDaysOfMonth(year, month + 1));
     };
 
     const showPrevMonth = () => {
-        const date = new Date(
-            calendar.currentDate.getFullYear(),
-            calendar.currentDate.getMonth() - 1
-        );
+        const year = calendar.currentDate.getFullYear();
+        const month = calendar.currentDate.getMonth();
+        const date = new Date(year, month - 1);
 
         switchMonth(date);
+        setDaysOfMonth(getDaysOfMonth(year, month - 1));
     };
 
     const onSelectDate = (date) => {
@@ -61,7 +63,7 @@ const Calendar = ({ calendar, selectDate, switchMonth }) => {
                     <div className='arrow-prev' onClick={showPrevMonth}>
                         Back
                     </div>
-                    <span>September 2020</span>
+                    <span>{calendar.currentDate.getMonth()}</span>
                     <div className='arrow-next' onClick={showNextMonth}>
                         Forward
                     </div>

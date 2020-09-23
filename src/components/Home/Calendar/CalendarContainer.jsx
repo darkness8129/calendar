@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import {
     selectDateActionCreator,
     switchMonthCreator,
+    setDaysOfMonthActionCreator,
 } from '../../../redux/actionCreators';
 import Calendar from './Calendar';
 
@@ -15,6 +16,8 @@ const mapDispatchToProps = (dispatch) => {
         selectDate: (date) => dispatch(selectDateActionCreator(date)),
         switchMonth: (switchedDate) =>
             dispatch(switchMonthCreator(switchedDate)),
+        setDaysOfMonth: (daysOfMonth) =>
+            dispatch(setDaysOfMonthActionCreator(daysOfMonth)),
     };
 };
 
