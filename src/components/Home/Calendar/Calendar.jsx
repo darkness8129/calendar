@@ -81,11 +81,11 @@ const Calendar = ({ calendar, selectDate, switchMonth, setDaysOfMonth }) => {
         <div className='calendar'>
             <div className='calendar-container'>
                 <div className='date-switcher'>
-                    <i class='arr_left' onClick={showPrevMonth} />
+                    <i className='arr_left' onClick={showPrevMonth} />
                     <span className='switcher-text'>{`${getNameOfMonthInLetters(
                         calendar.currentDate
                     )} ${getYear(calendar.currentDate)}`}</span>
-                    <i class='arr_right' onClick={showNextMonth} />
+                    <i className='arr_right' onClick={showNextMonth} />
                 </div>
                 <div className='calendar-dates'>{days}</div>
                 <div className='calendar-days'>{daysOfWeek}</div>

@@ -4,7 +4,11 @@ import './Logo.scss';
 const Logo = () => {
     return (
         <a href='https://werdevs.studio/'>
-            <img src='/public/images/logo.jpg' alt='logo' className='logo' />
+            <img
+                src='https://darkness8129.github.io/test-task-calendar/images/logo.jpg'
+                alt='logo'
+                className='logo'
+            />
         </a>
     );
 };

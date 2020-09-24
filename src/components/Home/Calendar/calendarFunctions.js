@@ -38,15 +38,15 @@ export const getDaysOfMonth = (year, month) => {
     for (let i = 0; i < (daysInMonth + monthStart) / 7; i++) {
         result[i] = []
 
-        // j < 7 because 7 days in week
+        // j < 7  - 7 days in week
         for (let j = 0; j < 7; j++) {
+            //i === 0 - first week
             if ((i === 0 && j < monthStart) || day > daysInMonth) {
                 result[i][j] = undefined;
             }
             else {
                 result[i][j] = new Date(year, month, day++);
             }
-
         }
     }
 
@@ -77,5 +77,4 @@ export const areDatesEqual = (date1, date2) => {
     return (date1.getFullYear() === date2.getFullYear() &&
         date1.getMonth() === date2.getMonth() &&
         date1.getDate() === date2.getDate());
-
 }
