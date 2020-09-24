@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/test-task-calendar/static/css/main.22c104b8.chunk.css",
+    "main.js": "/test-task-calendar/static/js/main.469880ac.chunk.js",
+    "main.js.map": "/test-task-calendar/static/js/main.469880ac.chunk.js.map",
+    "runtime-main.js": "/test-task-calendar/static/js/runtime-main.0fcbccfc.js",
+    "runtime-main.js.map": "/test-task-calendar/static/js/runtime-main.0fcbccfc.js.map",
+    "static/css/2.11829350.chunk.css": "/test-task-calendar/static/css/2.11829350.chunk.css",
+    "static/js/2.471cff2a.chunk.js": "/test-task-calendar/static/js/2.471cff2a.chunk.js",
+    "static/js/2.471cff2a.chunk.js.map": "/test-task-calendar/static/js/2.471cff2a.chunk.js.map",
+    "index.html": "/test-task-calendar/index.html",
+    "precache-manifest.7c3ee9e462d1f367b989350ecc06c58b.js": "/test-task-calendar/precache-manifest.7c3ee9e462d1f367b989350ecc06c58b.js",
+    "service-worker.js": "/test-task-calendar/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/test-task-calendar/static/css/2.11829350.chunk.css.map",
+    "static/css/main.22c104b8.chunk.css.map": "/test-task-calendar/static/css/main.22c104b8.chunk.css.map",
+    "static/js/2.471cff2a.chunk.js.LICENSE.txt": "/test-task-calendar/static/js/2.471cff2a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0fcbccfc.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.471cff2a.chunk.js",
+    "static/css/main.22c104b8.chunk.css",
+    "static/js/main.469880ac.chunk.js"
+  ]
+}
