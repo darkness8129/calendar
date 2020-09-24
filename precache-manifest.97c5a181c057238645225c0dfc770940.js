@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "be955606ec3910ac46abf7ff51229208",
+    "revision": "49873405a11433dd73272b0510d8ca01",
     "url": "/test-task-calendar/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/test-task-calendar/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "997c4c2bcd5833e6e045",
-    "url": "/test-task-calendar/static/css/main.22c104b8.chunk.css"
+    "revision": "6015903f07dcc3817cf7",
+    "url": "/test-task-calendar/static/css/main.8a147947.chunk.css"
   },
   {
     "revision": "a53303bc4e69c3597302",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/test-task-calendar/static/js/2.0e2020f0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "997c4c2bcd5833e6e045",
-    "url": "/test-task-calendar/static/js/main.f68dd288.chunk.js"
+    "revision": "6015903f07dcc3817cf7",
+    "url": "/test-task-calendar/static/js/main.cf825dfc.chunk.js"
   },
   {
     "revision": "b1a0a7d86a6ca2aebecc",
