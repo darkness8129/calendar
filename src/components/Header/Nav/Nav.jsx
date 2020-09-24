@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Nav.scss';
 import NavBtn from './NavBtn/NavBtn';
+import classNames from 'classnames';
 
 const navLinksItems = [
     {
@@ -37,7 +38,9 @@ const Nav = ({ isOpen, toggleIsOpen }) => {
         <nav className='navbar navbar-expand-sm'>
             <NavBtn isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
             <div
-                className={`collapse navbar-collapse ${isOpen ? ' show' : ''}`}
+                className={classNames('collapse', 'navbar-collapse', {
+                    show: isOpen,
+                })}
                 id='navbarSupportedContent'
             >
                 <ul className='navbar-nav mr-auto'>{navLinks}</ul>

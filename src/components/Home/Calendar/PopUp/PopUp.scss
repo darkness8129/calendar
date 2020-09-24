@@ -1,0 +1,25 @@
+@import './../../../../scss/colors';
+
+.modal-body {
+    color: black;
+    display: flex;
+    justify-content: space-around;
+
+    label,
+    input {
+        display: block;
+        text-align: start;
+    }
+
+    input {
+        border: 1px solid $primary-color;
+    }
+}
+
+.modal-content {
+    button {
+        text-align: end;
+        padding: 0 5px;
+        outline: none;
+    }
+}

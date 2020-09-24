@@ -1,23 +1,42 @@
 import React from 'react';
 import './Calendar.scss';
-import { getDaysOfMonth } from './calendarFunctions';
+import {
+    getDaysOfMonth,
+    areDatesEqual,
+    getYear,
+    getMonth,
+    getNameOfMonthInLetters,
+    getNameOfDayInLetters,
+    getDayNum,
+} from './calendarFunctions';
+import classNames from 'classnames';
+import PopUp from './PopUp/PopUp';
 
-const daysOfWeekArr = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+const daysOfWeekArr = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
 const Calendar = ({ calendar, selectDate, switchMonth, setDaysOfMonth }) => {
-    debugger;
     const days = calendar.currentMonth.map((week, index) => {
         return (
             <div className='week' key={index}>
                 {week.map((day, index) => {
                     return day ? (
-                        <div
-                            className='day'
+                        <a
                             key={index}
-                            onClick={() => onSelectDate(day)}
+                            data-toggle='modal'
+                            data-target='#date-modal'
                         >
-                            {day.getDate()}
-                        </div>
+                            <div
+                                className={classNames('day', {
+                                    day_active: areDatesEqual(
+                                        day,
+                                        calendar.currentDateToday
+                                    ),
+                                })}
+                                onClick={() => onSelectDate(day)}
+                            >
+                                {day.getDate()}
+                            </div>
+                        </a>
                     ) : (
                         <div key={index}></div>
                     );
@@ -35,8 +54,8 @@ const Calendar = ({ calendar, selectDate, switchMonth, setDaysOfMonth }) => {
     });
 
     const showNextMonth = () => {
-        const year = calendar.currentDate.getFullYear();
-        const month = calendar.currentDate.getMonth();
+        const year = getYear(calendar.currentDate);
+        const month = getMonth(calendar.currentDate);
         const date = new Date(year, month + 1);
 
         switchMonth(date);
@@ -44,8 +63,8 @@ const Calendar = ({ calendar, selectDate, switchMonth, setDaysOfMonth }) => {
     };
 
     const showPrevMonth = () => {
-        const year = calendar.currentDate.getFullYear();
-        const month = calendar.currentDate.getMonth();
+        const year = getYear(calendar.currentDate);
+        const month = getMonth(calendar.currentDate);
         const date = new Date(year, month - 1);
 
         switchMonth(date);
@@ -63,7 +82,9 @@ const Calendar = ({ calendar, selectDate, switchMonth, setDaysOfMonth }) => {
                     <div className='arrow-prev' onClick={showPrevMonth}>
                         Back
                     </div>
-                    <span>{calendar.currentDate.getMonth()}</span>
+                    <span className='switcher-text'>{`${getNameOfMonthInLetters(
+                        calendar.currentDate
+                    )} ${getYear(calendar.currentDate)}`}</span>
                     <div className='arrow-next' onClick={showNextMonth}>
                         Forward
                     </div>
@@ -71,6 +92,12 @@ const Calendar = ({ calendar, selectDate, switchMonth, setDaysOfMonth }) => {
                 <div className='calendar-dates'>{days}</div>
                 <div className='calendar-days'>{daysOfWeek}</div>
             </div>
+
+            <PopUp
+                month={getNameOfMonthInLetters(calendar.selectedDate)}
+                dayName={getNameOfDayInLetters(calendar.selectedDate)}
+                dayNum={getDayNum(calendar.selectedDate)}
+            />
         </div>
     );
 };
