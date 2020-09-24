@@ -1,7 +1,7 @@
 @import './../../../../scss/colors';
 
 .modal-body {
-    color: black;
+    color: $black;
     display: flex;
     justify-content: space-around;
 
@@ -11,8 +11,19 @@
         text-align: start;
     }
 
+    label {
+        color: gray;
+
+        &:last-child {
+            margin-left: 10px;
+        }
+    }
+
     input {
+        width: 100%;
+        max-width: 220px;
         border: 1px solid $primary-color;
+        font-weight: bold;
     }
 }
 
@@ -21,5 +32,12 @@
         text-align: end;
         padding: 0 5px;
         outline: none;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        background-color: $primary-color;
+        align-self: flex-end;
     }
+
+    border-radius: 0;
 }
