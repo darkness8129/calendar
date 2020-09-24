@@ -1,6 +1,7 @@
 import React from 'react';
 import CalendarContainer from './Calendar/CalendarContainer';
 import ImgBlock from './ImgBlock/ImgBlock';
+import './Home.scss';
 
 const Home = () => {
     return (

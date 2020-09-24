@@ -4,7 +4,7 @@ import './PopUp.scss';
 const PopUp = ({ month, dayName, dayNum }) => {
     return (
         <div className='modal' id='date-modal'>
-            <div className='modal-dialog'>
+            <div className='modal-dialog modal-dialog-centered'>
                 <div className='modal-content'>
                     <button
                         type='button'

@@ -1,8 +1,0 @@
-import React from 'react';
-import './Title.scss';
-
-const Title = () => {
-    return <h1 className='title'>Lorem ipsum dolor sit.</h1>;
-};
-
-export default Title;

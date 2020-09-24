@@ -34,7 +34,9 @@ const Calendar = ({ calendar, selectDate, switchMonth, setDaysOfMonth }) => {
                                 })}
                                 onClick={() => onSelectDate(day)}
                             >
-                                {day.getDate()}
+                                {day.getDate() < 10
+                                    ? '0' + day.getDate()
+                                    : day.getDate()}
                             </div>
                         </a>
                     ) : (
