@@ -14,7 +14,7 @@
     display: block;
     width: 25px;
     height: 3px;
-    background-color: $black;
+    background-color: $font-color;
     position: relative;
     transition: 0.5s linear all;
 
@@ -25,7 +25,7 @@
         left: 0;
         width: 25px;
         height: 3px;
-        background-color: $black;
+        background-color: $font-color;
         transition: 0.3s linear all;
     }
 
@@ -36,7 +36,7 @@
         left: 0;
         width: 25px;
         height: 3px;
-        background-color: $black;
+        background-color: $font-color;
         transition: 0.3s linear all;
     }
 }

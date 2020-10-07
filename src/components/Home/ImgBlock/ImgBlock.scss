@@ -16,13 +16,14 @@
     width: 100%;
     max-width: 400px;
     p {
-        color: white;
+        color: $white;
     }
 }
 
 .img-title {
     font-weight: bold;
     color: $primary-color;
+    text-transform: uppercase;
 }
 
 @media (max-width: 575px) {

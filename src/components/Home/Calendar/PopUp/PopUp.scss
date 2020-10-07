@@ -1,7 +1,7 @@
 @import './../../../../scss/colors';
 
 .modal-body {
-    color: $black;
+    color: $font-color;
     display: flex;
     justify-content: space-around;
 
@@ -12,7 +12,7 @@
     }
 
     label {
-        color: gray;
+        color: $gray;
 
         &:last-child {
             margin-left: 10px;
@@ -23,7 +23,7 @@
         width: 100%;
         max-width: 220px;
         border: 1px solid $primary-color;
-        font-weight: bold;
+        padding-left: 10px;
     }
 }
 

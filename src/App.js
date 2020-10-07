@@ -2,8 +2,8 @@ import React from 'react';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Header from './components/Header/Header';
-import './scss/base.scss';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import './scss/base.scss';
 
 const App = () => {
 
