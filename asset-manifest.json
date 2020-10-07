@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/test-task-calendar/static/css/main.8a147947.chunk.css",
-    "main.js": "/test-task-calendar/static/js/main.cf825dfc.chunk.js",
-    "main.js.map": "/test-task-calendar/static/js/main.cf825dfc.chunk.js.map",
+    "main.css": "/test-task-calendar/static/css/main.0e6c55f1.chunk.css",
+    "main.js": "/test-task-calendar/static/js/main.af41ce01.chunk.js",
+    "main.js.map": "/test-task-calendar/static/js/main.af41ce01.chunk.js.map",
     "runtime-main.js": "/test-task-calendar/static/js/runtime-main.0fcbccfc.js",
     "runtime-main.js.map": "/test-task-calendar/static/js/runtime-main.0fcbccfc.js.map",
     "static/css/2.11829350.chunk.css": "/test-task-calendar/static/css/2.11829350.chunk.css",
-    "static/js/2.0e2020f0.chunk.js": "/test-task-calendar/static/js/2.0e2020f0.chunk.js",
-    "static/js/2.0e2020f0.chunk.js.map": "/test-task-calendar/static/js/2.0e2020f0.chunk.js.map",
+    "static/js/2.676a0cbc.chunk.js": "/test-task-calendar/static/js/2.676a0cbc.chunk.js",
+    "static/js/2.676a0cbc.chunk.js.map": "/test-task-calendar/static/js/2.676a0cbc.chunk.js.map",
     "index.html": "/test-task-calendar/index.html",
-    "precache-manifest.97c5a181c057238645225c0dfc770940.js": "/test-task-calendar/precache-manifest.97c5a181c057238645225c0dfc770940.js",
+    "precache-manifest.0014b5904bbb0683f971beab4400ee8c.js": "/test-task-calendar/precache-manifest.0014b5904bbb0683f971beab4400ee8c.js",
     "service-worker.js": "/test-task-calendar/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/test-task-calendar/static/css/2.11829350.chunk.css.map",
-    "static/css/main.8a147947.chunk.css.map": "/test-task-calendar/static/css/main.8a147947.chunk.css.map",
-    "static/js/2.0e2020f0.chunk.js.LICENSE.txt": "/test-task-calendar/static/js/2.0e2020f0.chunk.js.LICENSE.txt"
+    "static/css/main.0e6c55f1.chunk.css.map": "/test-task-calendar/static/css/main.0e6c55f1.chunk.css.map",
+    "static/js/2.676a0cbc.chunk.js.LICENSE.txt": "/test-task-calendar/static/js/2.676a0cbc.chunk.js.LICENSE.txt",
+    "static/media/ImgBlock.scss": "/test-task-calendar/static/media/homeImg.37a75b54.jpg",
+    "static/media/logo.jpg": "/test-task-calendar/static/media/logo.c1b22935.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.0fcbccfc.js",
     "static/css/2.11829350.chunk.css",
-    "static/js/2.0e2020f0.chunk.js",
-    "static/css/main.8a147947.chunk.css",
-    "static/js/main.cf825dfc.chunk.js"
+    "static/js/2.676a0cbc.chunk.js",
+    "static/css/main.0e6c55f1.chunk.css",
+    "static/js/main.af41ce01.chunk.js"
   ]
 }
