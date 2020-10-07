@@ -1,14 +1,11 @@
 import React from 'react';
 import './Logo.scss';
+import logo from '../../../images/logo.jpg';
 
 const Logo = () => {
     return (
         <a href='https://werdevs.studio/'>
-            <img
-                src='https://darkness8129.github.io/test-task-calendar/images/logo.jpg'
-                alt='logo'
-                className='logo'
-            />
+            <img src={logo} alt='logo' className='logo' />
         </a>
     );
 };
