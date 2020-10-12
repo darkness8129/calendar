@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9bad547b33e5e9b8aed56487d6c61854",
+    "revision": "bb7aabb14bf93c650a41e1a13e1b0e1b",
     "url": "/test-task-calendar/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/test-task-calendar/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "7862f37ac817fe8ffa80",
-    "url": "/test-task-calendar/static/css/main.ae2aba35.chunk.css"
+    "revision": "07caa48cdf13919c3869",
+    "url": "/test-task-calendar/static/css/main.a6cf1727.chunk.css"
   },
   {
     "revision": "34eceeb0520ace291110",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/test-task-calendar/static/js/2.676a0cbc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7862f37ac817fe8ffa80",
-    "url": "/test-task-calendar/static/js/main.a33e83eb.chunk.js"
+    "revision": "07caa48cdf13919c3869",
+    "url": "/test-task-calendar/static/js/main.69402819.chunk.js"
   },
   {
     "revision": "b1a0a7d86a6ca2aebecc",
@@ -32,7 +32,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/test-task-calendar/static/media/homeImg.37a75b54.jpg"
   },
   {
-    "revision": "c1b2293586edb83bcd635cdb4e299109",
-    "url": "/test-task-calendar/static/media/logo.c1b22935.jpg"
+    "revision": "e0c8486f664f4185377b103e2bd78b3b",
+    "url": "/test-task-calendar/static/media/logo.e0c8486f.png"
   }
 ]);
