@@ -3,6 +3,9 @@
 }
 @media (max-width: 575px) {
     .logo {
-        display: none;
+        position: absolute;
+        top: 5.12px;
+        left: 16px;
+        width: 100px;
     }
 }

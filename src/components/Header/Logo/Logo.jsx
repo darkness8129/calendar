@@ -1,10 +1,10 @@
 import React from 'react';
 import './Logo.scss';
-import logo from '../../../images/logo.jpg';
+import logo from '../../../images/logo.png';
 
 const Logo = () => {
     return (
-        <a href='https://werdevs.studio/'>
+        <a href='#'>
             <img src={logo} alt='logo' className='logo' />
         </a>
     );
